@@ -8,6 +8,19 @@
           "build/netstandard2.0/coverlet.collector.targets": {}
         }
       },
+      "Dapper/2.1.66": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Dapper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Dapper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.CodeCoverage/17.12.0": {
         "type": "package",
         "compile": {
@@ -411,6 +424,30 @@
         "build": {
           "build/net6.0/xunit.runner.visualstudio.props": {}
         }
+      },
+      "TiendaOnline.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/TiendaOnline.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TiendaOnline.Core.dll": {}
+        }
+      },
+      "TiendaOnline.Dapper/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Dapper": "2.1.66",
+          "TiendaOnline.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TiendaOnline.Dapper.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TiendaOnline.Dapper.dll": {}
+        }
       }
     }
   },
@@ -483,6 +520,25 @@
         "coverlet-icon.png",
         "coverlet.collector.6.0.2.nupkg.sha512",
         "coverlet.collector.nuspec"
+      ]
+    },
+    "Dapper/2.1.66": {
+      "sha512": "/q77jUgDOS+bzkmk3Vy9SiWMaetTw+NOoPAV0xPBsGVAyljd5S6P+4RUW7R3ZUGGr9lDRyPKgAMj2UAOwvqZYw==",
+      "type": "package",
+      "path": "dapper/2.1.66",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Dapper.png",
+        "dapper.2.1.66.nupkg.sha512",
+        "dapper.nuspec",
+        "lib/net461/Dapper.dll",
+        "lib/net461/Dapper.xml",
+        "lib/net8.0/Dapper.dll",
+        "lib/net8.0/Dapper.xml",
+        "lib/netstandard2.0/Dapper.dll",
+        "lib/netstandard2.0/Dapper.xml",
+        "readme.md"
       ]
     },
     "Microsoft.CodeCoverage/17.12.0": {
@@ -932,42 +988,60 @@
         "xunit.runner.visualstudio.2.8.2.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "TiendaOnline.Core/1.0.0": {
+      "type": "project",
+      "path": "../TiendaOnline.Core/TiendaOnline.Core.csproj",
+      "msbuildProject": "../TiendaOnline.Core/TiendaOnline.Core.csproj"
+    },
+    "TiendaOnline.Dapper/1.0.0": {
+      "type": "project",
+      "path": "../TiendaOnline.Dapper/TiendaOnline.Dapper.csproj",
+      "msbuildProject": "../TiendaOnline.Dapper/TiendaOnline.Dapper.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
       "Microsoft.NET.Test.Sdk >= 17.12.0",
+      "TiendaOnline.Core >= 1.0.0",
+      "TiendaOnline.Dapper >= 1.0.0",
       "coverlet.collector >= 6.0.2",
       "xunit >= 2.9.2",
       "xunit.runner.visualstudio >= 2.8.2"
     ]
   },
   "packageFolders": {
-    "/home/et12alumno/.nuget/packages/": {}
+    "C:\\Users\\darko\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/et12alumno/Documentos/DapperPrueba/src/CSharp/TiendaOnline.Test/TiendaOnline.Test.csproj",
+      "projectUniqueName": "C:\\Users\\darko\\Documents\\GitHub\\main\\src\\CSharp\\TiendaOnline.Test\\TiendaOnline.Test.csproj",
       "projectName": "TiendaOnline.Test",
-      "projectPath": "/home/et12alumno/Documentos/DapperPrueba/src/CSharp/TiendaOnline.Test/TiendaOnline.Test.csproj",
-      "packagesPath": "/home/et12alumno/.nuget/packages/",
-      "outputPath": "/home/et12alumno/Documentos/DapperPrueba/src/CSharp/TiendaOnline.Test/obj/",
+      "projectPath": "C:\\Users\\darko\\Documents\\GitHub\\main\\src\\CSharp\\TiendaOnline.Test\\TiendaOnline.Test.csproj",
+      "packagesPath": "C:\\Users\\darko\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\darko\\Documents\\GitHub\\main\\src\\CSharp\\TiendaOnline.Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/et12alumno/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\darko\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "/usr/lib/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\darko\\Documents\\GitHub\\main\\src\\CSharp\\TiendaOnline.Core\\TiendaOnline.Core.csproj": {
+              "projectPath": "C:\\Users\\darko\\Documents\\GitHub\\main\\src\\CSharp\\TiendaOnline.Core\\TiendaOnline.Core.csproj"
+            },
+            "C:\\Users\\darko\\Documents\\GitHub\\main\\src\\CSharp\\TiendaOnline.Dapper\\TiendaOnline.Dapper.csproj": {
+              "projectPath": "C:\\Users\\darko\\Documents\\GitHub\\main\\src\\CSharp\\TiendaOnline.Dapper\\TiendaOnline.Dapper.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -980,7 +1054,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net9.0": {
@@ -1019,7 +1093,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/9.0.109/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
